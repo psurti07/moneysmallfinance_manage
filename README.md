@@ -1,0 +1,1 @@
+# moneysmallfinance_manage
