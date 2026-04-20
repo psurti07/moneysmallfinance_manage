@@ -20,16 +20,16 @@
                             <label>Sender Id's</label>
                             <div class="form-check-size rtl-input">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input me-2" id="inlineRadio1" type="radio" name="senderid" value="EASYAI" checked="">
-                                    <label class="form-check-label" for="inlineRadio1">EASYAI</label>
+                                    <input class="form-check-input me-2" id="inlineRadio1" type="radio" name="senderid" value="MNYSFI" checked="">
+                                    <label class="form-check-label" for="inlineRadio1">MNYSFI</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input me-2" id="inlineRadio2" type="radio" name="senderid" value="AILONS">
-                                    <label class="form-check-label" for="inlineRadio2">AILONS</label>
+                                    <input class="form-check-input me-2" id="inlineRadio2" type="radio" name="senderid" value="MONYSF">
+                                    <label class="form-check-label" for="inlineRadio2">MONYSF</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input me-2" id="inlineRadio3" type="radio" name="senderid" value="ESYAIL">
-                                    <label class="form-check-label" for="inlineRadio3">ESYAIL</label>
+                                    <input class="form-check-input me-2" id="inlineRadio3" type="radio" name="senderid" value="MOSMFI">
+                                    <label class="form-check-label" for="inlineRadio3">MOSMFI</label>
                                 </div>
                             </div>
                         </div>
