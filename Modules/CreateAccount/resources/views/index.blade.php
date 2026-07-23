@@ -63,7 +63,7 @@
                             {{-- mobile --}}
                             <div class="form-group col-md-6">
                                 <label for="mobile">Mobile<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="mobile" id="mobile" value="{{ old('mobile') }}" maxlength="10" minlength="10">
+                                <input type="text" class="form-control numeric-input" name="mobile" id="mobile" value="{{ old('mobile') }}" maxlength="10" minlength="10">
                                 @component('components.ajax-error',['field'=>'mobile'])@endcomponent
                             </div>
                             {{-- email --}}
@@ -198,7 +198,7 @@
                             {{-- Card Amount --}}
                             <div class="form-group col-md-6">
                                 <label for="amount">Card Amount<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="amount" id="amount" value="{{ old('amount') }}">
+                                <input type="text" class="form-control numeric-input" name="amount" id="amount" value="{{ old('amount') }}">
                                 @component('components.ajax-error',['field'=>'amount'])@endcomponent
                             </div>
                             {{-- Card Number --}}

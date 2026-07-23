@@ -110,7 +110,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="center"
-                                                                                            style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #E9F2FB;border-top-right-radius:12px;border-top-left-radius:12px;">
+                                                                                            style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #00924512;border-top-right-radius:12px;border-top-left-radius:12px;">
                                                                                             <p
                                                                                                 style="font-size:2.2rem;color:#1e7a35;font-weight:600">
                                                                                                 Congratulations ! 
@@ -158,7 +158,7 @@
                                                             style="padding: 0; margin: 0; padding-top: 10px; padding-bottom: 10px;">
                                                             <table cellpadding="0" cellspacing="0" class="es-left"
                                                                 align="left"
-                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: collapse;border-spacing: 0;float: left;background-color: #E9F2FB;border: 1px solid #0a8b4b;  border-radius: 12px; display: block;">
+                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: collapse;border-spacing: 0;float: left;background-color: #00924512;border: 1px solid #0a8b4b;  border-radius: 12px; display: block;">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="es-m-p20b" align="left"
@@ -174,7 +174,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td
-                                                                                            style="padding:0  20px; margin: 0; line-height: 1.5rem;background-color: #E9F2FB; color:#000;font-size:16px; border-radius: 12px;">
+                                                                                            style="padding:0  20px; margin: 0; line-height: 1.5rem;background-color: #00924512; color:#000;font-size:16px; border-radius: 12px;">
                                                                                             <p style="margin: 0;">Full Name :<span></span>
                                                                                             <h5 style="margin:0;">{{ $fullname }}</h5>
                                                                                             </p>
@@ -186,7 +186,7 @@
                                                                                             </p>
                                                                                         </td>
                                                                                         <td align="left"
-                                                                                            style="padding:0 20px; margin: 0; line-height: 1.5rem;background-color: #E9F2FB;  color:#000;font-size:16px;border-radius: 12px;">
+                                                                                            style="padding:0 20px; margin: 0; line-height: 1.5rem;background-color: #00924512;  color:#000;font-size:16px;border-radius: 12px;">
                                                                                             <p style="margin: 0;">Mobile :
                                                                                             <h5 style="margin: 0;">+91&nbsp;{{ $mobile }}</h5>
                                                                                             </p>
@@ -240,7 +240,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="left"
-                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #E9F2FB; border-radius:12px;color:#000;font-size:16px">
+                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #00924512; border-radius:12px;color:#000;font-size:16px">
                                                                                             <p style="font-size:13px">As per the details you provided, we’ve found the perfect loan offers! Please access your Loan Login links to quickly apply for the loan that suits you best:
                                                                                             <p>
                                                                                                 YOUR CREDENTIALS FOR

@@ -53,7 +53,7 @@
                                                 <div class="col-12 mt-3">
                                                     <div class="form-group">
                                                         <label for="mobile_no">Mobile No<span class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control" name="mobile_no" id="mobile_no" placeholder="Mobile No" maxlength="10" minlength="10">
+                                                        <input type="text" class="form-control numeric-input" name="mobile_no" id="mobile_no" placeholder="Mobile No" maxlength="10" minlength="10">
                                                         @component('components.ajax-error', ['field' => 'mobile_no'])@endcomponent
                                                     </div>
                                                 </div>
