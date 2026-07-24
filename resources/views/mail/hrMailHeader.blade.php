@@ -583,8 +583,8 @@
                                                                                                 Mobile:
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="tel:09429214352">
-                                                                                                +91-94292-14352
+                                                                                                    href="tel:09512821281">
+                                                                                                +91-95128-21281
                                                                                                 </a>
                                                                                                 | Email:
                                                                                                 <a href="mailto:info@moneysmallfinance.com"
