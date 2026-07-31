@@ -38,7 +38,7 @@ class CompanyLeadsController extends Controller
                 $query->where('l.loan_type', $loantype);
             }
 
-            $data = $query->orderByDesc('u.id')->get();
+            $data = $query->orderByDesc('u.rec_date')->get();
 
             return DataTables::of($data)
                 ->addIndexColumn()
