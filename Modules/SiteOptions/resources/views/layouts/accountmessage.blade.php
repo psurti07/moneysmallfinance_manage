@@ -50,7 +50,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-6">
+            {{-- <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
                         <h5>Loan Agent Important Updates</h5>
@@ -73,7 +73,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection
