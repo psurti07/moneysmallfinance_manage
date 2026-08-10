@@ -277,7 +277,7 @@
                                                                                     @endphp
                                                                                     <tr style="font-family: Poppins, sans-serif;">
                                                                                         <td>{{ $loop->iteration }}</td>
-                                                                                        <td><img src="{{ asset('upload/banks/'.$offer->bank_image) }}" alt="{{ $offer->bank_name }}" class="bank-logo"></td>
+                                                                                        <td><img src="{{ asset('../upload/banks/'.$offer->bank_image) }}" alt="{{ $offer->bank_name }}" class="bank-logo"></td>
                                                                                         <td>{{ $offer->bank_name }}</td>
                                                                                         <td>{{ $offer->tenures }}&nbsp;Months<br><span class="subtext">({{ $offer->roi }}%)</span></td>
                                                                                         <td><strong>{{ $click }}</strong> Clicked</td>

@@ -98,7 +98,7 @@ class LoanStatusController extends Controller
         /*if ($request->hasFile('sanction_letter')) {
             $image = $request->file('sanction_letter');
             $image_name = time() . '.' . $request->sanction_letter->extension();
-            $path = public_path('upload/sanction_letter');
+            $path = public_path('../upload/sanction_letter');
             $dest = $image->move($path, $image_name);
             $inputs['sanction_letter'] = $image_name;
         }*/

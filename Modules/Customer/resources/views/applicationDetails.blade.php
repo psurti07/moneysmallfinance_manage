@@ -154,7 +154,7 @@
                                         @foreach($offers as $offer)
                                         <tr>
                                             <td>         
-                                                <img src="{{ asset('upload/banks/'.$offer->bank_image) }}" width="80">
+                                                <img src="{{ asset('../upload/banks/'.$offer->bank_image) }}" width="80">
                                             </td>
                                             <td>
                                                 <div>

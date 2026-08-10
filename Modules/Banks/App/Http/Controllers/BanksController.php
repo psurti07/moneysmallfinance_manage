@@ -36,7 +36,7 @@ class BanksController extends Controller
         if ($request->hasFile('bank_image')) {
             $image = $request->file('bank_image');
             $image_name = time() . '.' . $request->bank_image->extension();
-            $path = public_path('upload/banks');
+            $path = public_path('../upload/banks');
             $dest = $image->move($path, $image_name);
             $input['bank_image'] = $image_name;
         }
@@ -84,10 +84,10 @@ class BanksController extends Controller
         if ($request->hasFile('bank_image')) {
             $image = $request->file('bank_image');
             $image_name = time() . '.' . $request->bank_image->extension();
-            $path = public_path('upload/banks');
+            $path = public_path('../upload/banks');
             $dest = $image->move($path, $image_name);
             $input['bank_image'] = $image_name;
-            $oldimg = public_path('upload/banks/' . $oldResult['bank_image']);
+            $oldimg = public_path('../upload/banks/' . $oldResult['bank_image']);
             File::delete($oldimg);
         }
         $result = Banks::where('id', $input['id'])->update($input);

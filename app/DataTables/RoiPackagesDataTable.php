@@ -34,7 +34,7 @@ class RoiPackagesDataTable extends DataTable
                           </ul>';
                 return $action;
             })
-            ->addColumn('bank',function($model){ return '<img src="'.url('upload/banks/'.$model->bank_image).'" height="50" width="100">'; })
+            ->addColumn('bank',function($model){ return '<img src="'.url('../upload/banks/'.$model->bank_image).'" height="50" width="100">'; })
             ->addColumn('bank_name',function($model){ return $model->bank_name; })
             ->addColumn('ROI',function($model){ return $model->roi; })
             ->addColumn('terms_years',function($model){ return $model->termsyears; })

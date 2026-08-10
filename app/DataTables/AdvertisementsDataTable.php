@@ -40,7 +40,7 @@ class AdvertisementsDataTable extends DataTable
                 if($row->ad_type == 1){
                     return htmlspecialchars($row->ad_content);
                 } else {
-                    return '<img src="'.asset('upload/ads/'.$row->ad_content).'" width="50" height="50">';
+                    return '<img src="'.asset('../upload/ads/'.$row->ad_content).'" width="50" height="50">';
                 }
 
             })

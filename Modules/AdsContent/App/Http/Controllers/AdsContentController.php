@@ -65,7 +65,7 @@ class AdsContentController extends Controller
         if ($request->hasFile('ad_content')) {
             $image = $request->file('ad_content');
             $image_name = time() . '.' . $request->ad_content->extension();
-            $path = public_path('upload/ads');
+            $path = public_path('../upload/ads');
             $dest = $image->move($path, $image_name);
             $input['ad_content'] = $image_name;
         }

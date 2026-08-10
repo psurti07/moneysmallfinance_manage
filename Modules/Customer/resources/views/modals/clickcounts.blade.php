@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <p class="text-center"><img src="{{ asset('upload/banks/'.$bank->bank_image) }}" alt="{{ $bank->bank_name }}" width="100"></p>
+                    <p class="text-center"><img src="{{ asset('../upload/banks/'.$bank->bank_image) }}" alt="{{ $bank->bank_name }}" width="100"></p>
                     <hr/>
                     <div class="col-md-12">
                         <div class="table-responsive">

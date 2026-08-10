@@ -38,7 +38,7 @@ class ApplyLinksDataTable extends DataTable
             ->addColumn('tenures',function($model){
                 return $model->tenures.' Months';
             })
-            ->addColumn('bank',function($model){ return '<img src="'.url('upload/banks/'.$model->bank_image).'" height="50" width="100">'; })
+            ->addColumn('bank',function($model){ return '<img src="'.url('../upload/banks/'.$model->bank_image).'" height="50" width="100">'; })
             ->addColumn('bank_name',function($model){ return $model->bank_name; })
             ->addColumn('url',function($model){ return $model->applyurl; })
             ->setRowId('id')->rawColumns(['action','bank','bank_name','url']);
