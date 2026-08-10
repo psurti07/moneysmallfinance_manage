@@ -48,7 +48,7 @@ class StaffTasksController extends Controller
             ]);
             $image = $request->file('attachment');
             $image_name = time() . '.' . $request->attachment->extension();
-            $path = public_path('upload/tasks');
+            $path = public_path('../upload/tasks');
             $dest = $image->move($path, $image_name);
             $input['attachment'] = $image_name;
         }
