@@ -26,12 +26,12 @@ class DashboardController extends Controller
         ->get()->toArray());
 
         $saLeads = array_reverse(DB::table('user_registrations')
-        ->selectRaw('YEAR(update_date) as recyear, MONTH(update_date) as recmonth, DAY(update_date) as recday, COUNT(id) as totaluser')
+        ->selectRaw('YEAR(rec_date) as recyear, MONTH(rec_date) as recmonth, DAY(rec_date) as recday, COUNT(id) as totaluser')
         ->where('isUser', 1)
         ->where('acc_type', 1)
         ->where('isDelete', 0)
-        ->groupByRaw('YEAR(update_date), MONTH(update_date), DAY(update_date)')
-        ->orderByRaw('YEAR(update_date) DESC, MONTH(update_date) DESC, DAY(update_date) DESC')
+        ->groupByRaw('YEAR(rec_date), MONTH(rec_date), DAY(rec_date)')
+        ->orderByRaw('YEAR(rec_date) DESC, MONTH(rec_date) DESC, DAY(rec_date) DESC')
         ->limit(15)
         ->get()->toArray());
     
@@ -46,12 +46,12 @@ class DashboardController extends Controller
         ->get()->toArray());
 
         $laLeads = array_reverse(DB::table('user_registrations')
-        ->selectRaw('YEAR(update_date) as recyear, MONTH(update_date) as recmonth, DAY(update_date) as recday, COUNT(id) as totaluser')
+        ->selectRaw('YEAR(rec_date) as recyear, MONTH(rec_date) as recmonth, DAY(rec_date) as recday, COUNT(id) as totaluser')
         ->where('isUser', 1)
         ->where('acc_type', 2)
         ->where('isDelete', 0)
-        ->groupByRaw('YEAR(update_date), MONTH(update_date), DAY(update_date)')
-        ->orderByRaw('YEAR(update_date) DESC, MONTH(update_date) DESC, DAY(update_date) DESC')
+        ->groupByRaw('YEAR(rec_date), MONTH(rec_date), DAY(rec_date)')
+        ->orderByRaw('YEAR(rec_date) DESC, MONTH(rec_date) DESC, DAY(rec_date) DESC')
         ->limit(15)
         ->get()->toArray());
         
