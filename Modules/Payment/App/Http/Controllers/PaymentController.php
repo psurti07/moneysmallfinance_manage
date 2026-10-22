@@ -3,7 +3,6 @@
 namespace Modules\Payment\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -16,11 +15,10 @@ class PaymentController extends Controller
     public function phonePayLog(Request $request)
     {
         $routeTable = Route::current()->uri();
-        Log::info("routeTable : " . $routeTable);
         $status = $request->input('status');
         $mainTable = 'user_registrations';
-
-        switch ($routeTable) {
+        
+        switch($routeTable){
             case 'razorpay-log':
                 $table = 'razorpayentry';
                 $table2 = 'user_registrations';
@@ -94,28 +92,20 @@ class PaymentController extends Controller
                 $column2 = 'referenceid';
                 break;
         }
-
+        
         if ($request->ajax()) {
             $fromDate = $request->input('fromDate');
             $toDate = $request->input('toDate');
             $query = DB::table($table);
-            if ($request->has('entryfor') && $request->entryfor > 0) {
-                $query->where('entryfor', $request->entryfor);
+            if($request->has('entryfor') && $request->entryfor > 0){
+                $query->where('entryfor',$request->entryfor);
             }
-            // if (!empty($fromDate) && !empty($toDate)) {
-            //     $query->whereRaw('DATE(rec_date)  BETWEEN  ? AND ?', [$fromDate, $toDate]);
-            // };
             if (!empty($fromDate) && !empty($toDate)) {
-                try {
-                    $query->whereDate('rec_date', '>=', Carbon::parse($fromDate))
-                        ->whereDate('rec_date', '<=', Carbon::parse($toDate));
-                } catch (\Exception $e) {
-                    Log::error('Date error: ' . $e->getMessage());
-                }
-            }
-            switch ($status) {
+                $query->whereRaw('DATE(rec_date)  BETWEEN  ? AND ?', [$fromDate, $toDate]);
+            };
+            switch($status){
                 case 1:
-                    $query->whereNotNull($column)->whereIn($column, ['SUCCESS', '1', 'PAID', 'PAYMENT_SUCCESS', 'Success', '100', 'captured']);
+                    $query->whereNotNull($column)->whereIn($column, ['SUCCESS','1','PAID','PAYMENT_SUCCESS','Success','100','captured']);
                     break;
                 case 2:
                     $query->whereNull($column)->orWhere($column, '');
@@ -126,25 +116,25 @@ class PaymentController extends Controller
             $payLogData = $query->orderByDesc('id')->get();
             return datatables()->of($payLogData)
                 ->addIndexColumn()
-                ->addColumn('rec_date', function ($row) {
+                ->addColumn('rec_date', function($row){
                     return date('d-m-Y H:i:s', strtotime($row->rec_date));
                 })
-                ->addColumn('fullname', function ($row) use ($mainTable, $table2) {
-                    $userRes = getUserData($row->userid, ($row->entryfor == 11 || $row->entryfor == 12 || $row->entryfor == 51) ? $mainTable : $table2);
+                ->addColumn('fullname', function ($row) use ($mainTable,$table2) {
+                    $userRes = getUserData($row->userid,($row->entryfor == 11 || $row->entryfor == 12 || $row->entryfor == 51) ? $mainTable : $table2);
                     if ($userRes) {
                         return $userRes->first_name . ' ' . $userRes->last_name;
                     }
                     return 'N/A';
                 })
-                ->addColumn('mobile', function ($row) use ($mainTable, $table2) {
-                    $userRes = getUserData($row->userid, ($row->entryfor == 11 || $row->entryfor == 12 || $row->entryfor == 51) ? $mainTable : $table2);
+                ->addColumn('mobile', function ($row) use ($mainTable,$table2) {
+                    $userRes = getUserData($row->userid,($row->entryfor == 11 || $row->entryfor == 12 || $row->entryfor == 51) ? $mainTable : $table2);
                     if ($userRes) {
                         return $userRes->mobile;
                     }
                     return 'N/A';
                 })
-                ->addColumn('email', function ($row) use ($mainTable, $table2) {
-                    $userRes = getUserData($row->userid, ($row->entryfor == 11 || $row->entryfor == 12 || $row->entryfor == 51) ? $mainTable : $table2);
+                ->addColumn('email', function ($row) use ($mainTable,$table2) {
+                    $userRes = getUserData($row->userid,($row->entryfor == 11 || $row->entryfor == 12 || $row->entryfor == 51) ? $mainTable : $table2);
                     if ($userRes) {
                         return $userRes->email ?? $userRes->emailid;
                     }
@@ -172,7 +162,7 @@ class PaymentController extends Controller
 
                     return $entryForMapping[$row->entryfor] ?? '-';
                 })
-                ->addColumn('status', function ($row) use ($column) {
+                ->addColumn('status', function ($row) use ($column){
                     return $row->$column;
                 })
                 ->addColumn('txnid', function ($row) use ($column2) {
@@ -182,4 +172,5 @@ class PaymentController extends Controller
         }
         return view('payment::index', compact('routeTable'));
     }
+
 }
